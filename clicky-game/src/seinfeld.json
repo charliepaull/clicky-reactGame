@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "quote": "You look like you live with your mother!",
         "author": "Jerry",
         "season": "1",
@@ -7,6 +8,7 @@
         "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/03/16/Seinfeld-4.jpg?w968h681"
     },
     {
+        "id": 2,
         "quote": "If you know what happened in the Mets game don't tell me, I taped it. Hello?",
         "author": "Jerry",
         "season": "1",
@@ -14,6 +16,7 @@
         "image": "https://cdn-s3.si.com/images/2005-0522-Jerry-Seinfeld-Mike-Piazza-HN1B1020.jpg"
     },
     {
+        "id": 3,
         "quote": "You done with this?",
         "author": "Kramer",
         "season": "1",
@@ -22,6 +25,7 @@
     },
     
     {
+        "id": 4,
         "quote": "This dictionary's no good, we need a medical dictionary! When a patient is difficult, you quone him.",
         "author": "Kramer",
         "season": "1",
@@ -30,6 +34,7 @@
     },
     
     {
+        "id": 5,
         "quote": "Kramerica Industries!",
         "author": "Kramer",
         "season": "1",
@@ -38,6 +43,7 @@
     },
     
     {
+        "id": 6,
         "quote": "You made a man cry? I've never made a man cry. I even kicked a guy in the groin once and he didn't cry.",
         "author": "Elaine",
         "season": "1",
@@ -45,6 +51,7 @@
         "image": "https://womenintheworld.com/wp-content/uploads/2015/04/screen-shot-2015-04-30-at-7-10-07-pm1.jpg?w=1280"
     },
     {
+        "id": 7,
         "quote": "What do you think a hit man would charge..to rub out a couple of cats?",
         "author": "Elaine",
         "season": "1",
@@ -52,6 +59,7 @@
         "image": "https://uproxx.files.wordpress.com/2015/06/seinfeld-4.png?w=650"
     },
     {
+        "id": 8,
         "quote": "You should do it like a band-aid -- one motion, RIGHT OFF!",
         "author": "Jerry",
         "season": "2",
@@ -59,6 +67,7 @@
         "image": "http://storm.cis.fordham.edu/~kendall/JerrySeinfeld.png"
     },
     {
+        "id": 9,
         "quote": "Levels Jerry..levels. --  I'm getting rid of all my furniture. All of it. And I'm going to build these different levels, with steps, and it'll all be carpeted with a lot of pillows. You know, like ancient Egypt.",
         "author": "Kramer",
         "season": "2",
@@ -66,6 +75,7 @@
         "image": "https://i.pinimg.com/originals/c0/78/d3/c078d3599b16a95996a901f9482a1709.jpg"
     },
     {
+        "id": 10,
         "quote": "I hate anyone who ever had a pony growing up!",
         "author": "Jerry",
         "season": "2",
@@ -73,6 +83,7 @@
         "image": "http://www.nerdinfinite.com/wp-content/uploads/bfi_thumb/seinfeld-george-constanza-mdit85lnr6cm48u2dgck9yyswer6lviiv4n17hxla0.jpg"
     },
     {
+        "id": 11,
         "quote": "I cannot envision any circumstance in which I'll ever have the opportunity to have sex again. How's it gonna happen? I just don't see how it could occur.",
         "author": "George",
         "season": "2",
@@ -80,6 +91,7 @@
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_L9KGR90TJPGf7ffB58OgQynkw44n5j2LGriJum81HDszwGDD"
     },
     {
+        "id": 12,
         "quote": "Can you do me a solid!?",
         "author": "Kramer",
         "season": "2",

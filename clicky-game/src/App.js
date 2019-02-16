@@ -46,13 +46,15 @@ class App extends Component {
         return(
             <div>
                 <Nav 
-                    score = {this.score}
-                    topScore = {this.topScore}
+                    score = {this.state.score}
+                    topScore = {this.state.topScore}
                 />
                 <Jumbo />
             {this.state.Seinfeld.map(characters => (
                 <Card 
                     seinfeldImg = {characters.image}
+                    scoreIncrement = {this.scoreIncrement}
+                    id = {characters.id}
                 />
             ))}
             </div>
