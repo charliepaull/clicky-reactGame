@@ -9,20 +9,45 @@ class App extends Component {
     state = {
         Seinfeld, 
         topScore: 7,
-        score: 0
+        score: 0,
+        arr: []
     };
 
-    scoreIncrement = () => {
-        this.setState({ score: 
-        this.state.score + 1});
-        console.log("I am clicked!");
-    };
+    shuffleArray = (array) => {
+        let i = array.length - 1;
+        for (; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+        return array;
+      };    
+
+    scoreIncrement = (event) => {
+        if (this.state.score < this.state.topScore) {
+            this.setState({
+                score: this.state.score + 1
+            });
+            this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
+            console.log(event);
+        } else if (this.state.score >= this.state.topScore) {
+            this.setState({
+                score: this.state.score + 1
+            });
+            this.setState({
+                topScore: this.state.topScore + 1
+            });
+            this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
+        }
+        }
 
     render() {
         return(
             <div>
                 <Nav 
-                    scoreIncrement = {this.scoreIncrement}
+                    score = {this.score}
+                    topScore = {this.topScore}
                 />
                 <Jumbo />
             {this.state.Seinfeld.map(characters => (

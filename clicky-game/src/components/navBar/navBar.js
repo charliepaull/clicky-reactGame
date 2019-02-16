@@ -7,8 +7,8 @@ function Nav(props){
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
                 <a className="navbar-brand" href="http://localhost:3000/">Clicky Game</a>
-                <a className="nav-link" href="/">State propped past through here <span className="sr-only"></span></a>
-                <a className="nav-link " href="#"> & Score Will Go</a>
+                <span className="nav-text">Click An Image to Begin</span>
+                <span className="nav-score ">Score: {props.score} || Top Score: {props.topScore}</span>
             </div>
             </nav>
         </div>
