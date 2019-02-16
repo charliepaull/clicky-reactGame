@@ -6,7 +6,7 @@ function Card(props){
         <div>
             <div className="card-group">
                 <div className="card">
-                    <img src={props.seinfeldImg} className="card-img-top" alt={props.name}/>>
+                    <img src={props.seinfeldImg} onClick={props.scoreIncrement} className="card-img-top" alt={props.name}/>
                     <div className="card-body">
                         <p className="card-text"></p>
                         <p className="card-text"><small className="text-muted"></small></p>

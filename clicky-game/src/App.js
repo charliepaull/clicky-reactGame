@@ -7,13 +7,23 @@ import Seinfeld from "./seinfeld.json";
 class App extends Component {
 
     state = {
-        Seinfeld
+        Seinfeld, 
+        topScore: 7,
+        score: 0
+    };
+
+    scoreIncrement = () => {
+        this.setState({ score: 
+        this.state.score + 1});
+        console.log("I am clicked!");
     };
 
     render() {
         return(
             <div>
-                <Nav />
+                <Nav 
+                    scoreIncrement = {this.scoreIncrement}
+                />
                 <Jumbo />
             {this.state.Seinfeld.map(characters => (
                 <Card 
