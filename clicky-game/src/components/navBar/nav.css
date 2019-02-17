@@ -1,3 +1,6 @@
-.navbar {
-    background-color: #4a4869;
+.navbar-brand, span {
+    width: 100%;
+    font-weight: bold;
+    /* background-color: rgb(245, 231, 35); */
+    color: rgb(177, 0, 0);
 }
