@@ -8,7 +8,7 @@ class App extends Component {
 
     state = {
         Seinfeld, 
-        topScore: 7,
+        topScore: 0,
         score: 0,
         arr: []
     };
@@ -22,25 +22,79 @@ class App extends Component {
           array[j] = temp;
         }
         return array;
-      };    
+    };    
+
+    // scoreIncrement  = id => {
+    //     if (stateArr has id) {
+    //       setState({
+    //         score...
+    //         ...
+    //         ...
+    //       })
+      
+    //     } else {
+    //       stateArr push id
+    //       setState({
+    //         score++
+    //       })
+    //     }
+    //   }
+
+    storeTopScore = (key, value) => {
+        this.setState({ topScore: this.state.topScore});
+        localStorage.setItem(key, value);
+    }
+
+    restartGame = () => {
+        this.setState({ score: 0})
+        this.storeTopScore();
+        window.location.reload();
+        
+    }
 
     scoreIncrement = (event) => {
-        if (this.state.score < this.state.topScore) {
-            this.setState({
-                score: this.state.score + 1
-            });
-            this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
-            console.log(event);
-        } else if (this.state.score >= this.state.topScore) {
-            this.setState({
-                score: this.state.score + 1
-            });
-            this.setState({
-                topScore: this.state.topScore + 1
-            });
-            this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
+
+        let newArr = this.state.arr;
+        newArr.push(event);
+        this.setState({ arr: newArr });
+        console.log(newArr);
+        
+        // for (var i = 0; i < newArr.length; i++){
+        //     if (newArr[newArr[i]] === undefined){
+        //         newArr[newArr[i]] = 1
+        //         console.log(true);
+        //     }
+        //     else {
+        //         console.log(false);
+        //     }
+        // }
+        // // console.log(event);
+
+        if (new Set(newArr).size !== newArr.length) {
+            this.setState({ topScore: this.state.score})
+            this.setState({ score: 0})
+            alert("You clicked a dupe! Time to start over and try again.");
+            this.restartGame();
         }
+        else {
+            if (this.state.score < this.state.topScore) {
+                this.setState({
+                    score: this.state.score + 1
+                });
+                this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
+                console.log(event);
+            } else if (this.state.score >= this.state.topScore) {
+                this.setState({
+                    score: this.state.score + 1
+                });
+                this.setState({
+                    topScore: this.state.topScore + 1
+                });
+                this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
+            }
+            }      
         }
+
 
     render() {
         return(
