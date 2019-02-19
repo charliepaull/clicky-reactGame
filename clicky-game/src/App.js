@@ -10,7 +10,8 @@ class App extends Component {
         Seinfeld, 
         topScore: 0,
         score: 0,
-        arr: []
+        arr: [],
+        navMessage: "Click a photo to begin!"
     };
 
     shuffleArray = (array) => {
@@ -24,34 +25,6 @@ class App extends Component {
         return array;
     };    
 
-    // scoreIncrement  = id => {
-    //     if (stateArr has id) {
-    //       setState({
-    //         score...
-    //         ...
-    //         ...
-    //       })
-      
-    //     } else {
-    //       stateArr push id
-    //       setState({
-    //         score++
-    //       })
-    //     }
-    //   }
-
-    storeTopScore = (key, value) => {
-        this.setState({ topScore: this.state.topScore});
-        localStorage.setItem(key, value);
-    }
-
-    restartGame = () => {
-        this.setState({ score: 0})
-        this.storeTopScore();
-        window.location.reload();
-        
-    }
-
     scoreIncrement = (event) => {
 
         let newArr = this.state.arr;
@@ -59,23 +32,16 @@ class App extends Component {
         this.setState({ arr: newArr });
         console.log(newArr);
         
-        // for (var i = 0; i < newArr.length; i++){
-        //     if (newArr[newArr[i]] === undefined){
-        //         newArr[newArr[i]] = 1
-        //         console.log(true);
-        //     }
-        //     else {
-        //         console.log(false);
-        //     }
-        // }
-        // // console.log(event);
-
         if (new Set(newArr).size !== newArr.length) {
-            this.setState({ topScore: this.state.score})
+            this.setState({
+                topScore: this.state.score,
+                arr: [],
+                navMessage: "Incorrect! Start a new game"
+            })
             this.setState({ score: 0})
-            alert("You clicked a dupe! Time to start over and try again.");
-            this.restartGame();
+            
         }
+        
         else {
             if (this.state.score < this.state.topScore) {
                 this.setState({
@@ -83,6 +49,7 @@ class App extends Component {
                 });
                 this.setState.Seinfeld = this.shuffleArray(this.state.Seinfeld);
                 console.log(event);
+
             } else if (this.state.score >= this.state.topScore) {
                 this.setState({
                     score: this.state.score + 1
@@ -95,13 +62,13 @@ class App extends Component {
             }      
         }
 
-
     render() {
         return(
             <div>
                 <Nav 
                     score = {this.state.score}
                     topScore = {this.state.topScore}
+                    navMessage = {this.state.navMessage}
                 />
                 <Jumbo />
             {this.state.Seinfeld.map(characters => (
